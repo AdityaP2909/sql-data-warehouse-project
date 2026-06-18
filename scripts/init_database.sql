@@ -17,17 +17,17 @@ USE master;
 GO
 
 --Drop and recreate the 'DataWarehouse' database
-IF EXISTS ( SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
+IF EXISTS ( SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse2')
 BEGIN
-	ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-	DROP DATABASE DataWarehouse;
+	ALTER DATABASE DataWarehouse2 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+	DROP DATABASE DataWarehouse2;
 END;
 GO 
 
 --Create the 'DataWarehouse' database
-CREATE DATABASE DataWarehouse;
+CREATE DATABASE DataWarehouse2;
 
-USE DataWarehouse;
+USE DataWarehouse2;
 GO
 
 --Create Schemas
